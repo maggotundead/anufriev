@@ -1,0 +1,53 @@
+$browser-font-size-viewport-ratio: 14.4; //design width 1440
+$browser-font-size-viewport-ratio-mobile: 3.75; //design width 375
+
+@function rem($pixels, $size: $browser-font-size-viewport-ratio) {
+    @return #{$pixels/$size}rem;
+}
+
+@function mobrem($pixels, $size: $browser-font-size-viewport-ratio-mobile) {
+    @return #{$pixels/$size}rem;
+}
+
+@function css-function($function, $values...) {
+    @return $function + unquote("(") + $values + unquote(")");
+}
+
+@function css-min($values...) {
+    @return css-function(min, $values);
+}
+
+@function css-max($values...) {
+    @return css-function(max, $values);
+}
+
+@function css-clamp($values...) {
+    @return css-function(clamp, $values);
+}
+
+
+@mixin desktop {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+@mixin touch {
+    @media screen and (max-width: 1023px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+}
+@mixin not-mobile {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
