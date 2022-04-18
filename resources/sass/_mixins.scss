@@ -1,13 +1,13 @@
-$browser-font-size-viewport-ratio: 14.4; //design width 1440
-$browser-font-size-viewport-ratio-mobile: 3.75; //design width 375
+// $browser-font-size-viewport-ratio: 14.4; //design width 1440
+// $browser-font-size-viewport-ratio-mobile: 3.75; //design width 375
 
-@function rem($pixels, $size: $browser-font-size-viewport-ratio) {
-    @return #{$pixels/$size}rem;
-}
+// @function rem($pixels, $size: $browser-font-size-viewport-ratio) {
+//     @return #{$pixels/$size}rem;
+// }
 
-@function mobrem($pixels, $size: $browser-font-size-viewport-ratio-mobile) {
-    @return #{$pixels/$size}rem;
-}
+// @function mobrem($pixels, $size: $browser-font-size-viewport-ratio-mobile) {
+//     @return #{$pixels/$size}rem;
+// }
 
 @function css-function($function, $values...) {
     @return $function + unquote("(") + $values + unquote(")");
@@ -26,18 +26,38 @@ $browser-font-size-viewport-ratio-mobile: 3.75; //design width 375
 }
 
 
-@mixin desktop {
-    @media screen and (min-width: 1024px) {
+@mixin responsive {
+    @media screen and (min-width: #{$container-width}) {
         @content;
     }
 }
-@mixin touch {
-    @media screen and (max-width: 1023px) {
+@mixin maxw1600 {
+    @media screen and (max-width: 1600px) {
+        @content;
+    }
+}
+@mixin maxw1440 {
+    @media screen and (max-width: 1440px) {
+        @content;
+    }
+}
+@mixin maxw1366 {
+    @media screen and (max-width: 1366px) {
+        @content;
+    }
+}
+@mixin maxw1280 {
+    @media screen and (max-width: 1280px) {
+        @content;
+    }
+}
+@mixin maxw1024 {
+    @media screen and (max-width: 1024px) {
         @content;
     }
 }
 @mixin tablet {
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
         @content;
     }
 }
@@ -49,5 +69,27 @@ $browser-font-size-viewport-ratio-mobile: 3.75; //design width 375
 @mixin mobile {
     @media screen and (max-width: 767px) {
         @content;
+    }
+}
+
+@mixin long-arrow {
+    &::before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 3px 0 3px 4px;
+        border-color: transparent transparent transparent currentColor;
+        position: absolute;
+        right: 0;
+        bottom: 12px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 80px;
+        right: 0;
+        bottom: 14px;
+        border-bottom: 1px solid currentColor;
     }
 }

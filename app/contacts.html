@@ -20,7 +20,7 @@
 
 	<body>
 		<div class="wrapper">
-			<header class="header">
+			<header class="header black-white">
 				<div class="container">
 					<div class="logo">
 						<img src="img/logo-black-ru.png" alt="" title="">
@@ -78,22 +78,76 @@
 			</header>
 
 			<main class="content">
-                <section style="padding-top: 300px; padding-bottom: 300px;">
+                <section class="block-contacts">
                     <div class="container">
-                        <ol style="font-size: 24px; line-height: 1.8;">
-                            <li>
-                                <a href="home.html">Главная</a>
-                            </li>
-                            <li>
-                                <a href="contacts.html">Контакты</a>
-                            </li>
-                            <li>
-                                <a href="404.html">404</a>
-                            </li>
-                        </ol>
+                        <div class="text">
+                            <h1 class="block-title">
+                                Контакты
+                            </h1>
+
+                            <div class="contacts">
+                                <div class="contacts-group">
+                                    <div class="contacts-group-title">
+                                        Мы находимся по адресу:
+                                    </div>
+                                    <div class="contacts-group-content">
+                                        <address>
+                                            <a href="https://maps.google.com/maps?daddr=55.75390007367729,37.62075208253201">
+                                                <svg width="24" height="24"><use xlink:href="#icon-marker"></use></svg>
+                                                <span>г.Москва, ул.Название, д.76, <br> офис 103</span>
+                                            </a>
+                                        </address>
+                                    </div>
+                                </div>
+                                <div class="contacts-group">
+                                    <div class="contacts-group-title">
+                                        Свяжитесь с нами:
+                                    </div>
+                                    <div class="contacts-group-content">
+                                        <a href="tel:">
+                                            <svg width="24" height="24"><use xlink:href="#icon-phone"></use></svg>
+                                            <span>(495) 555-41-73</span>
+                                        </a>
+                                        <a href="mailto:">
+                                            <svg width="24" height="24"><use xlink:href="#icon-mail"></use></svg>
+                                            <span>mail@mail.com</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <form action="/" class="cta-form">
+							<div class="input-group">
+								<input type="text" placeholder=" " required id="input-name">
+								<label for="input-name" class="input-label">Ваше имя</label>
+							</div>
+							<div class="input-group">
+								<input type="text" placeholder=" " required>
+								<label for="input-phone" class="input-label">Ваш номер телефона</label>
+							</div>
+							<div class="input-group">
+								<input type="email" placeholder=" ">
+								<label for="input-mail" class="input-label">Ваш e-mail</label>
+							</div>
+							<div class="checkbox-group">
+								<label class="checkbox-label">
+									<input type="checkbox" hidden>
+									<span class="checkbox-custom"></span>
+								</label>
+								<div class="checkbox-text">
+									Я согласен на обработку <a href="/" target="_blank">персональных данных</a>
+								</div>
+							</div>
+							<button class="btn">Получить консультацию</button>
+						</form>
+                    </div>
+                    <div class="map">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8fbc139e7f2aeed50084b8fc6626d214448ab84b339d69c0288882eecebf8aca&amp;source=constructor" width="100%" height="405" frameborder="0"></iframe>
                     </div>
                 </section>
-			</main>
+            </main>
 
 			<footer class="footer">
 				<div class="container">

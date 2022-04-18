@@ -10,7 +10,7 @@
 }
 
 html {
-    font-size: 1vw;
+    // font-size: 1vw;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
@@ -18,10 +18,11 @@ html {
 }
 
 body {
-    font-family: $text-font, serif;
+    font-family: $text-font, sans-serif;
     line-height: normal;
-    font-weight: 400;
-    letter-spacing: -0.03em;
+    font-size: 14px;
+    // font-weight: 400;
+    font-weight: 500;
 
     background: $body-bg;
     color: $black;
@@ -63,7 +64,7 @@ button {
     background-color: transparent;
     padding: 0;
     cursor: pointer;
-    font-size: inherit;
+    // font-size: inherit;
     color: inherit;
     &:hover {
         cursor: pointer;
@@ -137,16 +138,10 @@ main {
 
 .container {
     width: 100%;
-    max-width: rem(1280);
+    max-width: 1800px;
+    padding: 0 16px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    @include mobile {
-        max-width: mobrem(355);
-    }
-}
-
-.serif {
-    font-family: $serif-font;
 }
 

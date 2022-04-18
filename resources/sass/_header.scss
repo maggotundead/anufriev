@@ -1,18 +1,54 @@
 .header {
-    position: fixed;
+    // position: fixed;
+    padding-top: 18px;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    color: #fff;
     z-index: 3;
-    background-color: transparent;
-    mix-blend-mode: exclusion;
+    // background-color: transparent;
+    // mix-blend-mode: exclusion;
+    font-size: 14px;
+    line-height: 1.5;
+    &.white {
+        color: #fff;
+    }
+    &.black-white {
+        .menu {
+            color: #fff;
+        }
+    }
 
     .container {
-        padding: rem(20) 0;
         display: flex;
-        align-items: center;
         justify-content: space-between;
+    }
+    .logo {
+        margin-right: 170px;
+        img {
+            max-width: 130px;
+            max-height: 170px;
+            object-fit: contain;
+        }
+    }
+
+    .contacts {
+        align-self: flex-end;
+    }
+
+
+    .menu {
+        margin-left: auto;
+        padding-top: 60px;
+        ul {
+            list-style: none;
+            display: flex;
+        }
+        li {
+            &:not(:last-child) {
+                margin-right: 80px;
+            }
+        }
     }
 
     .burger {
