@@ -19,13 +19,12 @@ html {
 
 body {
     font-family: $text-font, sans-serif;
-    font-size: 14px;
-    line-height: 1.4;
-    // font-weight: 400;
-    font-weight: 500;
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 400;
 
     background: $body-bg;
-    color: $black;
+    color: $text;
 
     &.menu-open {
         // height: 100vh;
