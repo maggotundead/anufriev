@@ -78,14 +78,27 @@
         letter-spacing: 0.02em;
         &:not(:last-child) {
             margin-bottom: 28px;
+            @include responsive {
+                margin-bottom: 20px;
+            }
         }
         svg {
             margin-right: 12px;
+            position: relative;
+            @include maxw1024 {
+                width: 20px;
+                height: 20px;
+                margin-right: 8px;
+                bottom: -3px;
+            }
         }
     }
     address {
         font-style: normal;
         margin-bottom: 28px;
+        @include responsive {
+            margin-bottom: 20px;
+        }
     }
 }
 

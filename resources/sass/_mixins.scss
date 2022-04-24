@@ -27,7 +27,7 @@
 
 
 @mixin responsive {
-    @media screen and (min-width: #{$container-width}) {
+    @media screen and (max-width: #{$container-width}) {
         @content;
     }
 }
