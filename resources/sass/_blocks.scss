@@ -1879,6 +1879,7 @@
     }
     .container {
         display: flex;
+        align-items: flex-start;
         @include maxw1280 {
             flex-direction: column;
         }
@@ -1889,6 +1890,7 @@
         // left: -50px;
         left: -75px;
         position: absolute;
+        opacity: .5;
         @include responsive {
             width: 515px;
             left: -$container-padding-x;
@@ -1904,6 +1906,11 @@
         }
         @include mobile {
             display: none;
+        }
+        img {
+            @include maxw1280 {
+                object-position: left top;
+            }
         }
     }
     .text {

@@ -63,15 +63,17 @@ const massMediaSwiper = new Swiper('.js-media-swiper', {
         crossFade: true
     },
 });
+let counter = document.getElementById('articles-counter');
 function change(){
-    var counter = document.getElementById('articles-counter');
     counter.innerHTML = `<span>${ massMediaSwiper.realIndex +  1 }</span>/<span>${ massMediaSwiper.slides.length - 2 }</span>`; // if loop
     // counter.innerHTML = `<span>${ massMediaSwiper.realIndex +  1 }</span>/<span>${ massMediaSwiper.slides.length }</span>`; // if no loop
 }
 
-change();
-document.getElementById('next-article').addEventListener('click', change);
-document.getElementById('prev-article').addEventListener('click', change);
+if ( counter ) {
+    change();
+    document.getElementById('next-article').addEventListener('click', change);
+    document.getElementById('prev-article').addEventListener('click', change);
+}
 
 const massThumbsSwiper = new Swiper('.js-thumbs-swiper', {
     slidesPerView: 'auto',

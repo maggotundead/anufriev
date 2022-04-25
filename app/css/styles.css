@@ -2838,7 +2838,8 @@ main {
     .block-articles-list {
       padding-top: 150px; } }
   .block-articles-list .container {
-    display: flex; }
+    display: flex;
+    align-items: flex-start; }
     @media screen and (max-width: 1280px) {
       .block-articles-list .container {
         flex-direction: column; } }
@@ -2846,7 +2847,8 @@ main {
     height: 1000px;
     width: 675px;
     left: -75px;
-    position: absolute; }
+    position: absolute;
+    opacity: .5; }
     @media screen and (max-width: 1800px) {
       .block-articles-list .image-wrapper {
         width: 515px;
@@ -2863,6 +2865,9 @@ main {
     @media screen and (max-width: 767px) {
       .block-articles-list .image-wrapper {
         display: none; } }
+    @media screen and (max-width: 1280px) {
+      .block-articles-list .image-wrapper img {
+        object-position: left top; } }
   .block-articles-list .text {
     margin-left: 150px;
     width: 650px;
