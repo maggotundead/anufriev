@@ -71,6 +71,11 @@
         @content;
     }
 }
+@mixin maxw480 {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
 
 @mixin long-arrow {
     &::before {

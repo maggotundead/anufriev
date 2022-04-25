@@ -99,15 +99,21 @@
 				<section class="block-homescreen">
 					<div class="container">
 						<div class="image-wrapper">
-							<img src="img/temp/home-bg.jpg" alt="">
+							<picture>
+								<source media="(max-width: 767px)" srcset="img/temp/home-banner-mobile.jpg">
+								<source media="(max-width: 1024px)" srcset="img/temp/home-banner-small.jpg">
+								<source media="(max-width: 1280px)" srcset="img/temp/home-banner-medium.jpg">
+								<source media="(min-width: 1281px)" srcset="img/temp/home-banner-big.jpg">
+								<img src="img/temp/home-banner-big.jpg" alt="">
+							</picture>
 						</div>
 						<div class="text">
-							<h1 class="block-title">Юридические услуги</h1>
+							<h1 class="block-title page-title">Юридические услуги</h1>
 							<div class="title-descr">
 								Задача организации, в особенности же рамки и место обучения кадров требуют от нас анализа новых предложений. Равным образом реализация намеченных плановых заданий требуют от нас анализа дальнейших направлений развития
 							</div>
 						</div>
-						<button class="btn">Получить консультацию</button>
+						<button class="btn" data-modal-btn>Получить консультацию</button>
 					</div>
 				</section>
 
@@ -210,53 +216,184 @@
 						<h2 class="block-title centered">
 							Новости
 						</h2>
-						<div class="articles">
-							<a href="/" class="article-item banner">
-								<div class="article-item-photo">
-									<img src="https://image.posterlounge.ie/images/l/1889273.jpg" alt="" loading="lazy">
+						<div class="swiper-container articles js-articles-swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="/" class="article-item banner">
+										<div class="article-item-photo">
+											<img src="https://image.posterlounge.ie/images/l/1889273.jpg" alt="" loading="lazy">
+										</div>
+										<div class="article-item-info">
+											<time datetime="2022-02-01" class="article-item-date">
+												02.02.2022 г
+											</time>
+											<div class="article-item-title">
+												Инновационный путь позволяет выполнить важные задания
+											</div>
+										</div>
+									</a>
 								</div>
-								<div class="article-item-info">
-									<time datetime="2022-02-01" class="article-item-date">
-										02.02.2022 г
-									</time>
-									<div class="article-item-title">
-										Инновационный путь позволяет выполнить важные задания
-									</div>
+								<div class="swiper-slide">
+									<a href="/" class="article-item">
+										<div class="article-item-photo">
+											<img src="http://onebigphoto.com/uploads/2013/04/big-apple-at-night.jpg" alt="" loading="lazy">
+										</div>
+										<div class="article-item-info">
+											<time datetime="2022-02-01" class="article-item-date">
+												02.02.2022 г
+											</time>
+											<div class="article-item-title">
+												Сплочённость команды профессионалов
+											</div>
+										</div>
+									</a>
 								</div>
-							</a>
-							<a href="/" class="article-item">
-								<div class="article-item-photo">
-									<img src="http://onebigphoto.com/uploads/2013/04/big-apple-at-night.jpg" alt="" loading="lazy">
+								<div class="swiper-slide">
+									<a href="/" class="article-item">
+										<div class="article-item-photo">
+											<img src="https://cdn.pixabay.com/photo/2019/12/23/17/15/sunset-4715004_960_720.jpg" alt="" loading="lazy">
+										</div>
+										<div class="article-item-info">
+											<time datetime="2022-02-01" class="article-item-date">
+												02.02.2022 г
+											</time>
+											<div class="article-item-title">
+												Высокий уровень вовлечения
+											</div>
+										</div>
+									</a>
 								</div>
-								<div class="article-item-info">
-									<time datetime="2022-02-01" class="article-item-date">
-										02.02.2022 г
-									</time>
-									<div class="article-item-title">
-										Сплочённость команды профессионалов
-									</div>
-								</div>
-							</a>
-							<a href="/" class="article-item">
-								<div class="article-item-photo">
-									<img src="https://cdn.pixabay.com/photo/2019/12/23/17/15/sunset-4715004_960_720.jpg" alt="" loading="lazy">
-								</div>
-								<div class="article-item-info">
-									<time datetime="2022-02-01" class="article-item-date">
-										02.02.2022 г
-									</time>
-									<div class="article-item-title">
-										Высокий уровень вовлечения
-									</div>
-								</div>
-							</a>
+							</div>
 						</div>
 					</div>
 				</section>
 
 				<section class="block-mass-media">
 					<div class="container">
+						<div class="swiper-container media js-media-swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="article">
+										<a href="/" class="article-photo">
+											<img src="img/temp/article-slide-item.jpg" alt="" loading="lazy">
+										</a>
+										<div class="article-info">
+											<h2 class="block-title article-title">
+												<a href="/">
+													СМИ о нас 1
+												</a>
+											</h2>
+											<div class="title-descr article-title-descr">
+												Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации. Повседневная практика показывает, что рамки и место обучения кадров представляет собой интересный эксперимент проверки дальнейших направлений развития.
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="article">
+										<a href="/" class="article-photo">
+											<img src="img/temp/article-slide-item.jpg" alt="" loading="lazy">
+										</a>
+										<div class="article-info">
+											<h2 class="block-title article-title">
+												<a href="/">
+													СМИ о нас 2
+												</a>
+											</h2>
+											<div class="title-descr article-title-descr">
+												Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации. Повседневная практика показывает, что рамки и место обучения кадров представляет собой интересный эксперимент проверки дальнейших направлений развития.
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="article">
+										<a href="/" class="article-photo">
+											<img src="img/temp/article-slide-item.jpg" alt="" loading="lazy">
+										</a>
+										<div class="article-info">
+											<h2 class="block-title article-title">
+												<a href="/">
+													СМИ о нас 3
+												</a>
+											</h2>
+											<div class="title-descr article-title-descr">
+												Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации. Повседневная практика показывает, что рамки и место обучения кадров представляет собой интересный эксперимент проверки дальнейших направлений развития.
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="article">
+										<a href="/" class="article-photo">
+											<img src="img/temp/article-slide-item.jpg" alt="" loading="lazy">
+										</a>
+										<div class="article-info">
+											<h2 class="block-title article-title">
+												<a href="/">
+													СМИ о нас 4
+												</a>
+											</h2>
+											<div class="title-descr article-title-descr">
+												Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации. Повседневная практика показывает, что рамки и место обучения кадров представляет собой интересный эксперимент проверки дальнейших направлений развития.
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="article">
+										<a href="/" class="article-photo">
+											<img src="img/temp/article-slide-item.jpg" alt="" loading="lazy">
+										</a>
+										<div class="article-info">
+											<h2 class="block-title article-title">
+												<a href="/">
+													СМИ о нас 5
+												</a>
+											</h2>
+											<div class="title-descr article-title-descr">
+												Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации. Повседневная практика показывает, что рамки и место обучения кадров представляет собой интересный эксперимент проверки дальнейших направлений развития.
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-controls">
+								<div class="swiper-button swiper-button-prev" id="prev-article"></div>
+								<div class="counter" id="articles-counter"></div>
+								<div class="swiper-button swiper-button-next" id="next-article"></div>
+							</div>
+						</div>
 
+						<div class="swiper-container thumbs js-thumbs-swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="thumb">
+										<img src="img/temp/article-slide-item.jpg" alt="" loading="lazy">
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="thumb">
+										<img src="img/temp/article-slide-item.jpg" alt="" loading="lazy">
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="thumb">
+										<img src="img/temp/article-slide-item.jpg" alt="" loading="lazy">
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="thumb">
+										<img src="img/temp/article-slide-item.jpg" alt="" loading="lazy">
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="thumb">
+										<img src="img/temp/article-slide-item.jpg" alt="" loading="lazy">
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 			</main>
@@ -333,6 +470,45 @@
 					</div>
 				</div>
 			</footer>
+
+			<button class="chat-btn" data-modal-btn>НАПИШИТЕ НАМ</button>
+
+			<div class="modal contact-modal">
+				<div class="modal-overlay"></div>
+				<div class="modal-body">
+					<div class="modal-content">
+						<button class="modal-close"></button>
+						<h2 class="block-title modal-title">
+							Нужна помощь
+						</h2>
+
+						<form action="/" class="cta-form modal-form">
+							<div class="input-group">
+								<input type="text" placeholder=" " required id="input-name">
+								<label for="input-name" class="input-label">Ваше имя*</label>
+							</div>
+							<div class="input-group">
+								<input type="text" placeholder=" " required>
+								<label for="input-phone" class="input-label">Ваш номер телефона*</label>
+							</div>
+							<div class="input-group">
+								<input type="email" placeholder=" ">
+								<label for="input-mail" class="input-label">Ваш e-mail</label>
+							</div>
+							<div class="checkbox-group">
+								<label class="checkbox-label">
+									<input type="checkbox" hidden>
+									<span class="checkbox-custom"></span>
+								</label>
+								<div class="checkbox-text">
+									Я согласен на обработку <a href="/" target="_blank">персональных данных</a>
+								</div>
+							</div>
+							<button class="btn">Получить консультацию</button>
+						</form>
+					</div>
+				</div>
+			</div>
 
 			<div class="sprite" style="height: 0; overflow: hidden;">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" >

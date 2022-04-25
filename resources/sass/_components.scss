@@ -9,6 +9,14 @@
         font-size: 64px;
         line-height: 1.33;
         font-weight: 700;
+        @include maxw1440 {
+            font-size: 48px;
+            line-height: 64px;
+        }
+        @include maxw480 {
+            font-size: 36px;
+            line-height: 48px;
+        }
     }
     &.centered {
         text-align: center;
@@ -21,6 +29,15 @@
     font-size: 18px;
     line-height: 1.56;
     position: relative;
+    @include maxw1440 {
+        padding-left: 80px;
+        font-size: 16px;
+        line-height: 1.62;
+    }
+    @include mobile {
+        margin-top: 16px;
+        padding-left: 50px;
+    }
     &::before {
         content: '';
         width: 80px;
@@ -29,10 +46,25 @@
         left: 0;
         top: 14px;
         background-color: currentColor;
+        @include maxw1440 {
+            width: 60px;
+        }
+        @include mobile {
+            width: 30px;
+        }
     }
     p {
         &:not(:last-child) {
             margin-bottom: 24px;
+            @include maxw1440 {
+                margin-bottom: 18px;
+            }
+            @include maxw1280 {
+                margin-bottom: 12px;
+            }
+            @include maxw1024 {
+                margin-bottom: 0;
+            }
         }
     }
 }
@@ -40,6 +72,7 @@
 .image-wrapper {
     background-color: grey;
     position: relative;
+    overflow: hidden;
     img {
         width: 100%;
         height: 100%;
@@ -64,6 +97,12 @@
     transition: $duration;
     position: relative;
     letter-spacing: 0.02em;
+    @include responsive {
+        padding: 0 36px;
+    }
+    @include maxw480 {
+        padding: 0 28px;
+    }
 }
 
 .contacts {
@@ -183,6 +222,9 @@
     }
     .btn {
         margin-top: 95px;
+        @include mobile {
+            margin-top: 70px;
+        }
     }
 }
 
@@ -197,4 +239,37 @@
     padding-right: 120px;
     padding-bottom: 5px;
     @include long-arrow;
+}
+
+.chat-btn {
+    position: fixed;
+    top: 300px;
+    right: 0;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 60px;
+    background-color: $brown;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    z-index: 3;
+    transform: rotate(90deg);
+    transform-origin: right top;
+    margin-top: 256px;
+    &::after {
+        content: '';
+        background-color: #002529;
+        background-image: url("data:image/svg+xml,%3Csvg width='17' height='10' viewBox='0 0 17 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.402248 1.87381L7.73013 9.01697C7.85884 9.14243 8.03147 9.21265 8.21121 9.21265C8.39095 9.21265 8.56358 9.14243 8.69229 9.01697L16.0229 1.87381C16.0829 1.81537 16.1307 1.74549 16.1632 1.66831C16.1958 1.59113 16.2126 1.50821 16.2126 1.42443C16.2126 1.34066 16.1958 1.25773 16.1632 1.18055C16.1307 1.10337 16.0829 1.0335 16.0229 0.975055C15.8998 0.854823 15.7346 0.787512 15.5625 0.787512C15.3904 0.787512 15.2252 0.854823 15.1021 0.975055L8.21121 7.69228L1.32168 0.975055C1.19865 0.855235 1.0337 0.788185 0.861963 0.788185C0.690227 0.788185 0.525278 0.855235 0.402248 0.975055C0.342225 1.0335 0.294518 1.10337 0.261943 1.18055C0.229368 1.25773 0.212585 1.34066 0.212585 1.42443C0.212585 1.50821 0.229368 1.59113 0.261943 1.66831C0.294518 1.74549 0.342225 1.81537 0.402248 1.87381Z' fill='white'/%3E%3C/svg%3E%0A");
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 }

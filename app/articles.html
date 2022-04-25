@@ -99,7 +99,11 @@
                 <div class="block-articles-list">
                     <div class="container">
                         <div class="image-wrapper">
-                            <img src="img/temp/articles-banner.jpg" alt="">
+							<picture>
+								<source media="(max-width: 1280px)" srcset="img/temp/articles-banner-medium.jpg">
+								<source media="(min-width: 1281px)" srcset="img/temp/articles-banner-big.jpg">
+								<img src="img/temp/articles-banner-big.jpg" alt="">
+							</picture>
                         </div>
                         <div class="text">
                             <h1 class="block-title page-title">СМИ о нас</h1>

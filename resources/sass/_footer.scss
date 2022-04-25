@@ -114,6 +114,14 @@
     }
     .contacts {
         margin-left: auto;
+        @include responsive {
+            width: 300px;
+            align-items: flex-end;
+        }
+        @include maxw1280 {
+            width: auto;
+            align-items: flex-start;
+        }
         @include maxw1024 {
             width: calc(100% - 550px); // 160 + 390
             min-width: 250px;
@@ -130,6 +138,12 @@
         }
         a {
             font-weight: 400;
+            @include responsive {
+                min-width: 250px;
+            }
+            @include maxw1280 {
+                min-width: initial;
+            }
             @include maxw1024 {
                 min-width: 250px;
             }
